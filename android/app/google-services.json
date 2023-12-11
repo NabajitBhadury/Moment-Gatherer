@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "835877140492",
+    "project_id": "memory-collector-project",
+    "storage_bucket": "memory-collector-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835877140492:android:525b27bfa5fa8a29155629",
+        "android_client_info": {
+          "package_name": "com.example.memory_collector"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlv2vL8EkfI--BlLh9NQTk0d1Zl9leomI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
