@@ -9,8 +9,6 @@ abstract class AppEvent {
 
 // Here we write the events of the app like where on press of which button what action will be done and what page will do what thing
 
-
-
 // This is the app event while the user will upload the image so it takes a string of the path of the file
 @immutable
 class AppEventUploadImage implements AppEvent {
@@ -21,13 +19,11 @@ class AppEventUploadImage implements AppEvent {
   });
 }
 
-
 // This is the app event of deleting the user
 @immutable
 class AppEventDeleteAccount implements AppEvent {
   const AppEventDeleteAccount();
 }
-
 
 // This is the app event of log out of the user
 @immutable
@@ -42,7 +38,6 @@ class AppEventInitialize implements AppEvent {
   const AppEventInitialize();
 }
 
-
 // This is the event of log the user in by taking the string email and string password
 @immutable
 class AppEventLogin implements AppEvent {
@@ -54,7 +49,6 @@ class AppEventLogin implements AppEvent {
     required this.password,
   });
 }
-
 
 // this is the event to go to the register view from the login view if the user is not logged in
 @immutable

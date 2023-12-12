@@ -57,7 +57,9 @@ class RegisterView extends HookWidget {
             ),
             TextButton(
               onPressed: () {
-                const AppEventGoToLogin();
+                context.read<AppBloc>().add(
+                      const AppEventGoToLogin(),
+                    );
               },
               child: const Text(
                 'Already registered? Log in here',

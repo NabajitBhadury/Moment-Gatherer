@@ -57,7 +57,9 @@ class LoginView extends HookWidget {
             ),
             TextButton(
               onPressed: () {
-                const AppEventGoToRegistration();
+                context.read<AppBloc>().add(
+                      const AppEventGoToRegistration(),
+                    );
               },
               child: const Text(
                 'Yet not registered? Click here',

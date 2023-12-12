@@ -16,17 +16,21 @@ class AppBloc extends Bloc<AppEvent, AppState> {
           ),
         ) {
     // Handle to go to registration screen
-    on<AppEventGoToRegistration>((event, emit) {
-      emit(
-        const AppStateIsInRegistrationView(
-          isLoading: false,
-        ),
-      );
-    });
+    on<AppEventGoToRegistration>(
+      (event, emit) {
+        emit(
+          const AppStateIsInRegistrationView(
+            isLoading: false,
+          ),
+        );
+      },
+    );
     on<AppEventLogin>((event, emit) async {
       emit(
         // Here the user is initially in the logged out otherwise it is unable to login
-        const AppStateLoggedOut(isLoading: true),
+        const AppStateLoggedOut(
+          isLoading: true,
+        ),
       );
       try {
         // Now log the user in with the email and password and grab the user to show the images in the UI
@@ -81,9 +85,7 @@ class AppBloc extends Bloc<AppEvent, AppState> {
         );
         // Finally enable the user to login
         emit(
-          AppStateLoggedIn(
-            user: credintials.user!,
-            images: const [],
+          const AppStateIsInLoginView(
             isLoading: false,
           ),
         );

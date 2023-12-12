@@ -27,33 +27,38 @@ class App extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: BlocConsumer<AppBloc, AppState>(builder: (context, appState) {
-          if (appState is AppStateLoggedOut) {
-            return const LoginView();
-          } else if (appState is AppStateLoggedIn) {
-            return const PhotoGalleryView();
-          } else if (appState is AppStateIsInRegistrationView) {
-            return const RegisterView();
-          } else {
-            return Container();
-          }
-        }, listener: (context, appState) {
-          if (appState.isLoading) {
-            LoadingScreen.instance().show(
-              context: context,
-              text: 'Loading .....',
-            );
-          } else {
-            LoadingScreen.instance().hide();
-          }
-          final authError = appState.authError;
-          if (authError != null) {
-            showAuthError(
-              authError: authError,
-              context: context,
-            );
-          }
-        }),
+        home: BlocConsumer<AppBloc, AppState>(
+          listener: (context, appState) {
+            if (appState.isLoading) {
+              LoadingScreen.instance().show(
+                context: context,
+                text: 'Loading .....',
+              );
+            } else {
+              LoadingScreen.instance().hide();
+            }
+            final authError = appState.authError;
+            if (authError != null) {
+              showAuthError(
+                authError: authError,
+                context: context,
+              );
+            }
+          },
+          builder: (context, appState) {
+            if (appState is AppStateLoggedOut) {
+              return const LoginView();
+            } else if (appState is AppStateLoggedIn) {
+              return const PhotoGalleryView();
+            } else if (appState is AppStateIsInRegistrationView) {
+              return const RegisterView();
+            } else if (appState is AppStateIsInLoginView) {
+              return const LoginView();
+            } else {
+              return Container();
+            }
+          },
+        ),
       ),
     );
   }

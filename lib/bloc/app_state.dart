@@ -83,6 +83,18 @@ class AppStateIsInRegistrationView extends AppState {
         );
 }
 
+@immutable
+class AppStateIsInLoginView extends AppState {
+  // ignore: use_super_parameters
+  const AppStateIsInLoginView({
+    required bool isLoading,
+    AuthError? authError,
+  }) : super(
+          isLoading: isLoading,
+          authError: authError,
+        );
+}
+
 // Now we need to extract the user out of the AppStateLoggedIn using an extension as it is the only instance of the AppState where there is the user present
 extension GetUser on AppState {
   User? get user {
@@ -94,7 +106,6 @@ extension GetUser on AppState {
     }
   }
 }
-
 
 // In the same way as we did in the previous one we need to extract the images out of the AppStateLoggedIn
 extension GetImages on AppState {

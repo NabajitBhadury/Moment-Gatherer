@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart' show immutable;
 const Map<String, AuthError> authErrorMapping = {
   'user-not-found': AuthErrorUserNotFound(),
   'weak-password': AuthErrorWeakPassword(),
-  'invalid-email': AuthErrorInvalidEmail(),
+  'invalid-credential': AuthErrorInvalidCredentials(),
   'email-already-in-use': AuthErrorEmailAlreadyInUse(),
   'operation-not-allowed': AuthErrorOpperaionNotAllowed(),
   'requires-recent-login': AuthErrorRecentLogin(),
@@ -83,12 +83,11 @@ class AuthErrorWeakPassword extends AuthError {
 }
 
 @immutable
-class AuthErrorInvalidEmail extends AuthError {
-  const AuthErrorInvalidEmail()
+class AuthErrorInvalidCredentials extends AuthError {
+  const AuthErrorInvalidCredentials()
       : super(
-          dialogTitle: 'Invalid email',
-          dialogText:
-              'Please double check your email and provide a valid email',
+          dialogTitle: 'Invalid login credentials',
+          dialogText: 'Please double check your email or password',
         );
 }
 
