@@ -38,7 +38,7 @@ Follow these steps to install and run Flutter:
 2. **Run the Project:**
    - Clone the repository:
      ```bash
-     git clone https://github.com/your-username/memory-collector.git
+     git clone https://github.com/NabajitBhadury/Moment-Gatherer.git
      ```
    - Navigate to the project directory:
      ```bash
@@ -66,7 +66,7 @@ We welcome contributions from the community! If you'd like to contribute to this
 2. **Clone Your Fork:**
    - Clone the repository from your GitHub account to your local machine.
      ```bash
-     git clone https://github.com/your-username/memory-collector.git
+     git clone https://github.com/NabajitBhadury/Moment-Gatherer.git
      ```
 
 3. **Create a Branch:**
@@ -105,7 +105,7 @@ If the original repository has been updated, sync your fork to include the lates
 1. **Add Upstream Remote:**
    - Add the upstream repository as a remote.
      ```bash
-     git remote add upstream https://github.com/original-username/memory-collector.git
+     git remote add upstream https://github.com/NabajitBhadury/Moment-Gatherer.git
      ```
 
 2. **Fetch Upstream Changes:**
