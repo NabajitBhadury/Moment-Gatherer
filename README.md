@@ -133,7 +133,3 @@ We appreciate your contributions! Let's make Memory Collector even better togeth
 
 <center> <img src ="https://media.giphy.com/media/5aWCH8b4yJi4SncjH2/giphy.gif" width="100%" > </center>
 
-## Contributors
-- [Nabajit Bhadury](https://github.com/NabajitBhadury)
-- [Abhraneel Karmakar](https://github.com/abhraneel2004)
-
